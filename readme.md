@@ -1,10 +1,13 @@
 # Gennadiyev's Frontpage
 
-Git commit guide:
+Git commit:
 
 ```git
 git add Pasts
 git add Techie
-git commit -m "2021****"
+git add Randoms
+git add readme.md
+git commit -m "20210417"
 git push -u origin2 master -f
 ```
+
