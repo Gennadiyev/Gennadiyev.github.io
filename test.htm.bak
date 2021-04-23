@@ -1,0 +1,523 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://202.127.242.250/dl/test.asp?paperno=29 -->
+<!--  考试页面--><HTML><HEAD><TITLE>考试页面</TITLE>
+<SCRIPT language=javascript>
+<!--
+ 
+function click() {
+if (event.button==2) {
+window.alert("考试期间，请不要使用右键！");
+}
+}
+document.onmousedown=click;
+ 
+ -->
+
+</SCRIPT>
+
+<STYLE type=text/css>.unnamed1 {
+	FONT-SIZE: 10pt; TEXT-DECORATION: none
+}
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+.style1 {
+	FONT-SIZE: large
+}
+.style3 {
+	FONT-SIZE: medium
+}
+</STYLE>
+
+<META http-equiv=Content-Type content="text/html; charset=utf8">
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+/*function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+*///-->
+</SCRIPT>
+
+<FORM name=forms>
+<META content="MSHTML 6.00.2900.2912" name=GENERATOR></HEAD>
+<BODY>
+<P class=style1 align=center>电路考试第一场 </P>
+<P>本次考试共15道题，考试时间为8:00:00－－8:45:00，共计45分钟，到时系统会自动提交，请抓紧时间 <INPUT type=hidden 
+value=8:00:00 name=starttime> <INPUT type=hidden value=8:45:00 name=endtime> 
+<INPUT type=hidden value=0 name=hourtime> <INPUT type=hidden value=44 
+name=minutetime> <INPUT type=hidden value=58 name=secondtime> <INPUT type=hidden 
+value=8:00:02 name=nowtime> <INPUT type=hidden size=5 value=29 name=paperno> 
+</P>
+<CENTER>
+<DIV align=center><SPAN class=unnamed1>考试剩余时间: <INPUT size=9 name=lefttime> 
+</SPAN></DIV></CENTER></FORM>
+<FORM id=FORM1 name=FORM1 method=post>
+<P align=center><SPAN class=unnamed1></SPAN></SPAN>
+<P align=left>第1题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_145_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans1> A.<IMG src="考试页面.files/5_145_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans1> B.<IMG src="考试页面.files/5_145_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans1> C.<IMG src="考试页面.files/5_145_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans1> D.<IMG src="考试页面.files/5_145_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans1> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第2题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_55_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans2> A.<IMG src="考试页面.files/5_55_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans2> B.<IMG src="考试页面.files/5_55_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans2> C.<IMG src="考试页面.files/5_55_b.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans2> D.<IMG src="考试页面.files/5_55_a.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans2> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第3题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_23_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans3> A.<IMG src="考试页面.files/5_23_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans3> B.<IMG src="考试页面.files/5_23_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans3> C.<IMG src="考试页面.files/5_23_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans3> D.<IMG src="考试页面.files/5_23_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans3> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第4题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_17_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans4> A.<IMG src="考试页面.files/5_17_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans4> B.<IMG src="考试页面.files/5_17_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans4> C.<IMG src="考试页面.files/5_17_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans4> D.<IMG src="考试页面.files/5_17_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans4> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第5题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_73_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans5> A.<IMG src="考试页面.files/5_73_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans5> B.<IMG src="考试页面.files/5_73_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans5> C.<IMG src="考试页面.files/5_73_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans5> D.<IMG src="考试页面.files/5_73_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans5> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第6题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_35_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans6> A.<IMG src="考试页面.files/5_35_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans6> B.<IMG src="考试页面.files/5_35_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans6> C.<IMG src="考试页面.files/5_35_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans6> D.<IMG src="考试页面.files/5_35_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans6> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第7题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_36_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans7> A.<IMG src="考试页面.files/5_36_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans7> B.<IMG src="考试页面.files/5_36_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans7> C.<IMG src="考试页面.files/5_36_b.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans7> D.<IMG src="考试页面.files/5_36_a.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans7> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第8题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/7_11_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans8> A.<IMG src="考试页面.files/7_11_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans8> B.<IMG src="考试页面.files/7_11_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans8> C.<IMG src="考试页面.files/7_11_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans8> D.<IMG src="考试页面.files/7_11_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans8> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第9题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_80_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans9> A.<IMG src="考试页面.files/5_80_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans9> B.<IMG src="考试页面.files/5_80_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans9> C.<IMG src="考试页面.files/5_80_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans9> D.<IMG src="考试页面.files/5_80_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans9> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第10题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_66_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans10> A.<IMG src="考试页面.files/5_66_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans10> B.<IMG src="考试页面.files/5_66_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans10> C.<IMG src="考试页面.files/5_66_b.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans10> D.<IMG src="考试页面.files/5_66_a.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans10> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第11题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_75_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans11> A.<IMG src="考试页面.files/5_75_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans11> B.<IMG src="考试页面.files/5_75_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans11> C.<IMG src="考试页面.files/5_75_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans11> D.<IMG src="考试页面.files/5_75_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans11> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第12题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_130_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans12> A.<IMG src="考试页面.files/5_130_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans12> B.<IMG src="考试页面.files/5_130_a.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans12> C.<IMG src="考试页面.files/5_130_d.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans12> D.<IMG src="考试页面.files/5_130_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans12> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第13题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_100_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans13> A.<IMG src="考试页面.files/5_100_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans13> B.<IMG src="考试页面.files/5_100_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans13> C.<IMG src="考试页面.files/5_100_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans13> D.<IMG src="考试页面.files/5_100_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans13> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第14题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_8_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans14> A.<IMG src="考试页面.files/5_8_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans14> B.<IMG src="考试页面.files/5_8_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans14> C.<IMG src="考试页面.files/5_8_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans14> D.<IMG src="考试页面.files/5_8_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans14> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></SPAN>
+<P align=left>第15题&nbsp;&nbsp; </P>
+<P align=center><SPAN class=unnamed1>&nbsp;&nbsp; <IMG 
+src="考试页面.files/5_76_q.jpg"> </SPAN></P>
+<DIV align=center>
+<TABLE borderColor=#0099ff cellSpacing=1 cellPadding=1 width="35%" align=center 
+border=1>
+  <TBODY>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=3 name=ans15> A.<IMG src="考试页面.files/5_76_a.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=4 
+      name=ans15> B.<IMG src="考试页面.files/5_76_d.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 width="51%" bgColor=#ffffff><INPUT type=radio value=1 
+      name=ans15> C.<IMG src="考试页面.files/5_76_c.jpg"> </TD></TR>
+  <TR bgColor=#ccccff>
+    <TD class=unnamed1 width="49%" bgColor=#ffffff><INPUT type=radio value=2 
+      name=ans15> D.<IMG src="考试页面.files/5_76_b.jpg"> </TD></TR>
+  <TR bgColor=#99ccff>
+    <TD class=unnamed1 style="WIDTH: 50%" width="49%" bgColor=#ffffff><INPUT 
+      type=radio value=5 name=ans15> E.以上答案都不对 </TD></TR></TBODY></TABLE>
+<P class=unnamed1></P>
+<P></P>
+<P class=unnamed1></P></DIV>
+<DIV align=center></DIV>
+<P align=center><SPAN class=unnamed1><INPUT id=submit1 onclick=submitit() type=submit value=提交 name=submit1> 
+<INPUT id=reset1 type=reset value=重填 name=reset1> </SPAN></P>
+<SCRIPT language=javascript>
+
+//MM_showHideLayers('persistMenu','','show');
+//ScrollMenu();
+//document.all.mystarttime.value=document.all.starttime.value;
+//document.all.myendtime.value=document.all.endtime.value;
+var myh=document.all.hourtime.value;
+var mym=document.all.minutetime.value;
+
+var mys=document.all.secondtime.value;
+//var kcid=document.all.kcid.value
+var et=document.all.endtime.value
+var nt=document.all.nowtime.value;
+var paperno1=document.all.paperno.value;
+var straction;
+
+straction="result.asp?paperno="+String(paperno1);
+ 
+ function lefttime()
+{
+ 		mys--;
+  		if (mys<0)
+  		{
+		   mys=59;
+			mym--;
+		}
+		if (mym<0)
+		{
+			mym=59;
+			myh--;
+			if (myh<0)
+			{
+			 	FORM1.action=straction;
+				FORM1.submit();
+		  		alert("考试时间到，请提交您的试卷！");
+			 
+			 }
+  		}
+	
+		document.all.lefttime.value=Math.floor(myh)+"时"+mym+"分"+mys+"秒";
+ 		setTimeout("lefttime(myh)",1000);
+} 
+  function scrollImg(){
+    var posX,posY;
+    if (window.innerHeight) {
+        posX = window.pageXOffset;
+        posY = window.pageYOffset;
+    }
+    else if (document.documentElement && document.documentElement.scrollTop) {
+        posX = document.documentElement.scrollLeft;
+        posY = document.documentElement.scrollTop;
+    }
+    else if (document.body) {
+        posX = document.body.scrollLeft;
+        posY = document.body.scrollTop;
+    }
+
+    var ad=document.getElementById("ad");
+    ad.style.top=(posY+173)+"px";
+    ad.style.left=(posX+43)+"px";
+    setTimeout("scrollImg()",1000);
+}
+
+
+
+lefttime(); 
+scrollImg();
+
+function submitit()
+{
+   FORM1.submit();
+ // confirm("未到交卷时间，您确定要提前交卷么？");
+  if (confirm("未到交卷时间，您确定要提前交卷么？"))
+  {  
+   
+    FORM1.action=straction;
+    
+  }
+  
+  return false;
+}
+
+ 
+      </SCRIPT>
+</FORM>
+<DIV align=center><SPAN 
+class=unnamed1></SPAN></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></BODY></HTML>
