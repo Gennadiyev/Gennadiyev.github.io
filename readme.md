@@ -26,6 +26,6 @@ Git commit:
 
 ```git
 git add .
-git commit -m "readme.md Update to make the page ready to publish."
+git commit -m "20210513 (I lost a push progress!)"
 git push -u origin2 master -f
 ```
