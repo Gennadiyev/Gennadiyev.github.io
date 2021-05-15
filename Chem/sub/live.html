@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>live</title>
+</head>
+<body>
+  <script type="text/javascript" src="./http-live-player.js"></script>
+  <script>
+	  var canvas = document.createElement("canvas");
+	  document.body.appendChild(canvas);
+	  var wsavc = new WSAvcPlayer(canvas, "webgl");
+	  wsavc.connect("ws://" + "192.168.1.3" + ":8080"); // normal
+	  // wsavc.connect("ws://" + "192.168.1.2" + ":8080"); // hdcam
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+OnClick.LeftArm.AcquireQuantityUpdate = function() {
+      var i = Number(document.getElementById("leftarm-acquire-quantity-slider").value)
+      if (i == 1) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: Little";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 2) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: Some";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 3) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: A lot";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 0) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: 0";
+        document.getElementById("leftarm-acquire-menu-button").disabled = true;
+      }
+    }

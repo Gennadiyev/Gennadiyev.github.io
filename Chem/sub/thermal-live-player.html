@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Thermal View Demo</title>
+</head>
+<title>
+</title>
+<body>
+    <canvas id="thermalView" width="640" height="480"></canvas>
+    <script src="./thermal-view.js"></script>
+    <script>
+        const thermalCanvas = InitThermalView('thermalView', 16, 12);
+        const thermalSocket = new WebSocket('ws://192.168.1.2:2053');
+        thermalSocket.addEventListener('message', (event) => {
+            RenderThermalView(thermalCanvas, JSON.parse(event.data));
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "title": "Chemist",
+  "sidebar": {
+    "title": "Chemist",
+    "subtitle": "“赛博拉瓦锡”计划",
+    "demonstration": "示例实验",
+    "scripting": "脚本",
+    "about_help": "关于 / 帮助"
+  },
+  "ui": {
+    "tabs": {
+      "environment": "环境",
+      "left_arm": "左臂",
+      "right_arm": "右臂"
+    }
+  }
+}

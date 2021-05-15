@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/material-icons.css">
+    <link rel="stylesheet" href="material-design-lite_custom.css">
+    <link rel="stylesheet" href="Assets/material-main.css">
+    <script src="Assets/polyfill-min.js"></script>
+    <script src="button.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="Assets/tex-svg.js">
+    </script>
+    <script src="main.js">
+    </script>
+    <script defer src="Assets/material-minimal.js">
+    </script>
+    <title>Chemist
+    </title>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span id="main-title" class="mdl-layout-title">Chemist
+          </span>
+          <div class="mdl-layout-spacer">
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+              <i class="material-icons">search
+              </i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Chemist
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" id="SIDEBAR_ITEM_demonstration">Demonstration
+          </a>
+          <a class="mdl-navigation__link" id="SIDEBAR_ITEM_scripting">Command-line
+          </a>
+          </a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div id="WRAPPER">
+            <div id="DISPLAY" style="width:60%">
+              <canvas id="CAMERA" style="width:100%"></canvas>
+              <canvas id="HDCAMERA" style="width:100%"></canvas>
+              <canvas id="THERMAL" width="640" height="480"></canvas>
+            </div>
+            <div id="CONTROL" style="height:100%">
+              <!-- Snackbar -->
+              <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                <div class="mdl-snackbar__text">
+                </div>
+                <button class="mdl-snackbar__action" type="button">
+                </button>
+              </div>
+              <!-- Main -->
+              <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="CONTROL_TABS">
+                <header class="mdl-layout__header">
+                  <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                    <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Environment
+                    </a>
+                    <a href="#fixed-tab-2" class="mdl-layout__tab">Left Arm
+                    </a>
+                    <a href="#fixed-tab-3" class="mdl-layout__tab">Right Arm
+                    </a>
+                  </div>
+                </header>
+                <main class="mdl-layout__content" style="padding:10px">
+                  <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                    <div class="page-content">
+                      <!-- PAGE CONTENT 1 BEGIN -->
+                      <!-- Welcome -->
+                      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">Welcome!
+                          </h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          First time here? Are you ready to conduct your first experiment?
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick=promptDemonstrationExperiment()>
+                            Get Started
+                          </a>
+                        </div>
+                        <div class="mdl-card__menu">
+                          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">share
+                            </i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ACTIONS BEGIN -->
+                      <ul class="demo-list-two mdl-list">
+                        <!-- ACTION: RESET -->
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Reset
+                            </span>
+                            <span class="mdl-list__item-sub-title">Reset whole environment
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--accent" onclick=OnClick.Environment.Reset()>
+                            Reset
+                            </button>
+                          </span>
+                        </li>
+                        <!-- ACTION: SET DISPLAY -->
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Set display
+                            </span>
+                            <span class="mdl-list__item-sub-title">Select video stream on the left
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <span class="mdl-list__item-secondary-action">
+                              <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored" onclick=OnClick.Environment.ToggleDisplay()>
+                                Toggle
+                              </button>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                      <!-- ACTIONS END -->
+                      <!-- PAGE CONTENT 1 END -->
+                    </div>
+                  </section>
+                  <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                    <div class="page-content">
+                      <!-- ACTIONS BEGIN -->
+                      <!-- ACTION: HOLD -->
+                      <ul class="demo-list-two mdl-list">
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Hold
+                            </span>
+                            <span class="mdl-list__item-sub-title">Take hold of a container
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <button id="menu-leftarm-hold" class="mdl-button mdl-js-button mdl-button--icon">
+                              <i class="material-icons">more_vert
+                            </i>
+                            </button>
+                          </span>
+                          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menu-leftarm-hold">
+                            <li class="mdl-menu__item" onclick=OnClick.LeftArm.Hold('tube')>Tube
+                            </li>
+                            <li class="mdl-menu__item" onclick=OnClick.LeftArm.Hold('beaker')>Beaker
+                            </li>
+                            <li class="mdl-menu__item" onclick=OnClick.LeftArm.Hold('flask')>Flask
+                            </li>
+                          </ul>
+                        </li>
+                      <!-- ACTION: ACQUIRE -->
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Acquire
+                            </span>
+                            <span class="mdl-list__item-sub-title" id="leftarm-acquire-quantity-display">Amount: Little
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <button id="leftarm-acquire-menu-button" class="mdl-button mdl-js-button mdl-button--icon" onclick=OnClick.LeftArm.GetChemicals()>
+                              <i class="material-icons">add
+                              </i>
+                            </button>
+                          </span>
+                          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="leftarm-acquire-menu-button">
+                            <li id="leftarm-acquire-menu-1" class="mdl-menu__item" onclick=OnClick.LeftArm.Acquire(1)>
+                            </li>
+                            <li id="leftarm-acquire-menu-2" class="mdl-menu__item" onclick=OnClick.LeftArm.Acquire(2)>
+                            </li>
+                            <li id="leftarm-acquire-menu-3" class="mdl-menu__item" onclick=OnClick.LeftArm.Acquire(3)>
+                            </li>
+                            <li id="leftarm-acquire-menu-4" class="mdl-menu__item" onclick=OnClick.LeftArm.Acquire(4)>
+                            </li>
+                          </ul>
+                        </li>
+                        <input class="mdl-slider mdl-js-slider" id="leftarm-acquire-quantity-slider" type="range" min="0" max="3" value="1" onchange=OnClick.LeftArm.AcquireQuantityUpdate()>
+                      </ul>
+                      <!-- ACTION: MIX -->
+                      <li class="mdl-list__item mdl-list__item--two-line">
+                        <span class="mdl-list__item-primary-content">
+                          <span>Mix to right arm
+                          </span>
+                          <span class="mdl-list__item-sub-title">Tilt the container to mix with right arm
+                          </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-action">
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick=OnClick.LeftArm.Mix()>
+                            Mix
+                          </button>
+                        </span>
+                      </li>
+                      <!-- ACTION: OBSERVE -->
+                      <li class="mdl-list__item mdl-list__item--two-line">
+                        <span class="mdl-list__item-primary-content">
+                          <span>Observe
+                          </span>
+                          <span class="mdl-list__item-sub-title">Use HD Camera to observe left arm
+                          </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-action">
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick=OnClick.LeftArm.Observe()>
+                            Observe
+                          </button>
+                        </span>
+                      </li>
+                      <!-- ACTIONS END -->
+                    </div>
+                  </section>
+                  <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                    <div class="page-content">
+                      <!-- ACTIONS BEGIN -->
+                      <!-- ACTION: HOLD -->
+                      <ul class="demo-list-two mdl-list">
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Hold
+                            </span>
+                            <span class="mdl-list__item-sub-title">Take hold of a container
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <button id="menu-rightarm-hold" class="mdl-button mdl-js-button mdl-button--icon">
+                              <i class="material-icons">more_vert
+                            </i>
+                            </button>
+                          </span>
+                          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menu-rightarm-hold">
+                            <li class="mdl-menu__item" onclick=OnClick.RightArm.Hold('tube')>Tube
+                            </li>
+                            <li class="mdl-menu__item" onclick=OnClick.RightArm.Hold('beaker')>Beaker
+                            </li>
+                            <li class="mdl-menu__item" onclick=OnClick.RightArm.Hold('flask')>Flask
+                            </li>
+                          </ul>
+                        </li>
+                      <!-- ACTION: ACQUIRE -->
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                          <span class="mdl-list__item-primary-content">
+                            <span>Acquire
+                              </span>
+                            <span class="mdl-list__item-sub-title" id="rightarm-acquire-quantity-display">Amount: Little
+                            </span>
+                          </span>
+                          <span class="mdl-list__item-secondary-action">
+                            <button id="rightarm-acquire-menu-button" class="mdl-button mdl-js-button mdl-button--icon" onclick=OnClick.RightArm.GetChemicals()>
+                              <i class="material-icons">add
+                            </i>
+                            </button>
+                          </span>
+                          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="rightarm-acquire-menu-button">
+                            <li id="rightarm-acquire-menu-1" class="mdl-menu__item" onclick=OnClick.RightArm.Acquire(1)>
+                            </li>
+                            <li id="rightarm-acquire-menu-2" class="mdl-menu__item" onclick=OnClick.RightArm.Acquire(2)>
+                            </li>
+                            <li id="rightarm-acquire-menu-3" class="mdl-menu__item" onclick=OnClick.RightArm.Acquire(3)>
+                            </li>
+                            <li id="rightarm-acquire-menu-4" class="mdl-menu__item" onclick=OnClick.RightArm.Acquire(4)>
+                            </li>
+                          </ul>
+                        </li>
+                        <input class="mdl-slider mdl-js-slider" id="rightarm-acquire-quantity-slider" type="range" min="0" max="3" value="1" onchange=OnClick.RightArm.AcquireQuantityUpdate()>
+                      </ul>
+                      <!-- ACTIONS END -->
+                    </div>
+                  </section>
+                </main>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <dialog id="DIALOG_selectDemonstration" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Demonstration</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+          <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">\(\text{CuSO}_4\) with \(\text{NaOH}\)
+          </span>
+        </label>
+        <br>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+          <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+          <span class="mdl-radio__label">\(\text{MnO}_2\) with \(\text{H}_2\text{O}_2\)
+          </span>
+        </label>
+        <br>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+          <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3" disabled>
+          <span class="mdl-radio__label">Titration
+          </span>
+        </label>
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button ok" id="DIALOG_selectDemonstration_BUTTON_ok">OK
+      </button>
+    </div>
+    <script>
+      // OK button clears dialog
+      document.getElementById("DIALOG_selectDemonstration_BUTTON_ok").onclick = function() {
+        DIALOG_selectDemonstration.close();
+      }
+    </script>
+  </dialog>
+  <dialog id="DIALOG_confirmReset" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Confirm Reset</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        Are you sure you want to reset?
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button ok" id="DIALOG_confirmReset_BUTTON_ok">OK
+      </button>
+      <button type="button" class="mdl-button close" id="DIALOG_confirmReset_BUTTON_cancel">Cancel
+      </button>
+    </div>
+    <script>
+      document.getElementById("DIALOG_confirmReset_BUTTON_ok").onclick = function() {
+        DIALOG_confirmReset.close();
+        notify("Reset in process");
+        var timeout = 0;
+        if (State.kun.environment.isWorkState) {
+          registerEvent("turnToStorageArea")
+          State = turnToStorageArea(State);
+          timeout = State.time;
+        }
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          timeout = 0;
+          if (State.kun.leftArm.holding) {
+            if (State.kun.leftArm.holding == "tube") {
+              registerEvent("leftHandReturnTube")
+              State = leftHandReturnTube(State);
+              timeout = State.time;
+            } else if (State.kun.leftArm.holding == "flask") {
+              registerEvent("leftHandReturnFlask")
+              State = leftHandReturnFlask(State);
+              timeout = State.time;
+            } else if (State.kun.leftArm.holding == "beaker") {
+              notify("Cannot handle beaker in left arm")
+            }
+          }
+          setTimeout(function() {
+            State.kun.leftArm.holding = undefined;
+            State.kun.leftArm.isEmpty = true;
+            timeout = 0;
+            if (State.kun.rightArm.holding) {
+              if (State.kun.rightArm.holding == "tube") {
+                registerEvent("rightHandReturnTube");
+                State = rightHandReturnTube(State);
+                timeout = State.time;
+              } else if (State.kun.rightArm.holding == "flask") {
+                notify("Cannot handle flask in right arm")
+              } else if (State.kun.rightArm.holding == "beaker") {
+                registerEvent("rightHandReturnBeaker");
+                State = rightHandReturnBeaker(State);
+                timeout = State.time;
+              }
+            }
+            setTimeout(function() {
+              State.kun.rightArm.holding = undefined;
+              State.kun.rightArm.isEmpty = true;
+              notify("Reset completed")
+            }, timeout * 1000)
+          }, timeout * 1000)
+        }, timeout * 1000)
+      }
+      document.getElementById("DIALOG_confirmReset_BUTTON_cancel").onclick = function() {
+        DIALOG_confirmReset.close();
+      }
+    </script>
+  </dialog>
+  <dialog id="DIALOG_forcePass" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Force Pass</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        The previous action may have not been completed!<br>Are you sure to skip the waiting period? You'll need to retry previous action again.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button ok" id="DIALOG_forcePass_BUTTON_skip">Skip
+      </button>
+      <button type="button" class="mdl-button close" id="DIALOG_forcePass_BUTTON_cancel">Cancel
+      </button>
+    </div>
+    <script>
+      document.getElementById("DIALOG_forcePass_BUTTON_skip").onclick = function() {
+        DIALOG_forcePass.close();
+        State.time = 0;
+        notify("Waiting period reset");
+      }
+      document.getElementById("DIALOG_forcePass_BUTTON_cancel").onclick = function() {
+        DIALOG_forcePass.close();
+      }
+    </script>
+  </dialog>
+  <dialog id="DIALOG_inputCommand">
+    <h3 class="mdl-dialog__title">Command-line</h3>
+    <div class="mdl-dialog__content">
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="TEXTFIELD_cmd">
+          <label class="mdl-textfield__label" for="cmd">Command...</label>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button ok" id="DIALOG_inputCommand_BUTTON_execute">Execute
+      </button>
+    </div>
+    <script>
+      // OK button clears dialog
+      document.getElementById("DIALOG_inputCommand_BUTTON_execute").onclick = function() {
+        DIALOG_inputCommand.close();
+        OnClick.Others.SendCommand(document.getElementById("TEXTFIELD_cmd").value);
+      }
+    </script>
+  </dialog>
+  <script src="config.js">
+  </script>
+  <script src="sub/thermal-view.js"></script>
+  <script src="sub/http-live-player.js"></script>
+  <script>
+    // Set Camera
+    var canvas = document.getElementById("CAMERA");
+    var wsavc = new WSAvcPlayer(canvas, "webgl");
+    wsavc.connect("ws://192.168.1.3:8080");
+    // Set HD Camera
+    var canvasHD = document.getElementById("HDCAMERA");
+    var wsavchd = new WSAvcPlayer(canvasHD, "webgl");
+    wsavchd.connect("ws://192.168.1.2:8080");
+    // Set Thermal Camera
+    var thermalCanvas = InitThermalView('THERMAL', 16, 12);
+    var thermalSocket = new WebSocket('ws://192.168.1.2:2053');
+    thermalSocket.addEventListener('message', (event) => {
+      RenderThermalView(thermalCanvas, JSON.parse(event.data));
+    })
+    // Select experiment function
+    promptDemonstrationExperiment = function() {
+      DIALOG_selectDemonstration.showModal();
+    }
+    // Define Snackbar shortcut function
+    notify = function(notification, duration) {
+      'use strict';
+      window['counter'] = 0;
+      var snackbarContainer = document.querySelector('#demo-toast-example');
+      var data = {
+        message: notification,
+        timeout: duration * 1000
+      };
+      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    }
+    future = function() {
+      notify("Not yet implemented", 0.5)
+    }
+    // Register Event
+    registerEvent = function(funcName) {
+      State.kun.others.lastOperation = Date.now();
+      console.log("PERFORMING: " + funcName);
+      notify("Performing: "+funcName)
+    }
+    // Define status query function
+    queryStatus = function() {
+      if (Date.now() > State.kun.others.lastOperation + State.time * 1000) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    // Define OnClick callbacks
+    OnClick = {
+      "Environment": {
+      },
+      "Others": {
+      },
+      "LeftArm": {
+      },
+      "RightArm": {
+      }
+    };
+    OnClick.Others.SendCommand = function(command) {
+      if (command == "") {
+        notify("Nothing to execute")
+      } else {
+        notify("Executing: " + command)
+        socketSend(command)
+      }
+    }
+    OnClick.Environment.Reset = function() {
+      DIALOG_confirmReset.showModal();
+    }
+    // DEPRECATED
+    OnClick.Environment.SwitchWorkstate = function() {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal()
+        return
+      }
+      // No ongoing task: get current workstate
+      var workState = State.kun.environment.isWorkState
+      if (workState) {
+        // Currently workstate, do exit workstate
+        registerEvent("turnToStorageArea");
+        State = turnToStorageArea(State);
+        console.log("Timeout: " + State.time)
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          // notify("Task completed")
+        }, State.time * 1000)
+      } else {
+        // Currently not workstate, do enter workstate
+        registerEvent("turnToExperimentArea");
+        State = turnToExperimentArea(State);
+        console.log("Timeout: " + State.time)
+        setTimeout(function() {
+          State.kun.environment.isWorkState = true;
+          // notify("Task completed")
+        }, State.time * 1000)
+      }
+    }
+    OnClick.Environment.ToggleDisplay = function() {
+      if (State.kun.environment.display == "camera") {
+        document.getElementById("CAMERA").style = "display: none"
+        document.getElementById("HDCAMERA").style = "display: block"
+        document.getElementById("THERMAL").style = "display: none"
+        State.kun.environment.display = "hdcamera"
+      } else if (State.kun.environment.display == "hdcamera") {
+        document.getElementById("CAMERA").style = "display: none"
+        document.getElementById("HDCAMERA").style = "display: none"
+        document.getElementById("THERMAL").style = "display: block"
+        State.kun.environment.display = "thermal"
+      } else if (State.kun.environment.display == "thermal") {
+        document.getElementById("CAMERA").style = "display: block"
+        document.getElementById("HDCAMERA").style = "display: none"
+        document.getElementById("THERMAL").style = "display: none"
+        State.kun.environment.display = "camera"
+      }
+    }
+    OnClick.LeftArm.Hold = function(item) {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (State.kun.environment.isWorkState) {
+        registerEvent("turnToStorageArea")
+        State = turnToStorageArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          if (item == "tube") {
+            if (!State.kun.leftArm.holding) {
+              registerEvent("leftHandGetTube")
+              State = leftHandGetTube(State)
+              console.log("Timeout: " + State.time)
+              setTimeout(function() {
+                State.kun.leftArm.holding = "tube"
+                // notify("Task completed")
+              }, State.time * 1000)
+            } else {
+              notify("Left arm is holding " + State.kun.leftArm.holding + " already")
+            }
+          } else if (item == "flask") {
+            if (!State.kun.leftArm.holding) {
+              registerEvent("leftHandGetFlask");
+              State.kun.others.lastOperation = Date.now()
+              State = leftHandGetFlask(State)
+              console.log("Timeout: " + State.time)
+              setTimeout(function() {
+                State.kun.leftArm.holding = "flask"
+              }, State.time * 1000)
+            } else {
+              notify("Left arm is holding " + State.kun.leftArm.holding + " already")
+            }
+          } else if (item == "beaker") {
+            future();
+          }
+        }, State.time * 1000)
+      } else {
+        if (item == "tube") {
+          if (!State.kun.leftArm.holding) {
+            registerEvent("leftHandGetTube")
+            State = leftHandGetTube(State)
+            console.log("Timeout: " + State.time)
+            setTimeout(function() {
+              State.kun.leftArm.holding = "tube"
+              // notify("Task completed")
+            }, State.time * 1000)
+          } else {
+            notify("Left arm is holding " + State.kun.leftArm.holding + " already")
+          }
+        } else if (item == "flask") {
+          if (!State.kun.leftArm.holding) {
+            registerEvent("leftHandGetFlask");
+            State.kun.others.lastOperation = Date.now()
+            State = leftHandGetFlask(State)
+            console.log("Timeout: " + State.time)
+            setTimeout(function() {
+              State.kun.leftArm.holding = "flask"
+            }, State.time * 1000)
+          } else {
+            notify("Left arm is holding " + State.kun.leftArm.holding + " already")
+          }
+        } else if (item == "beaker") {
+          future();
+        }
+      }
+    }
+    OnClick.RightArm.Hold = function(item) {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (State.kun.environment.isWorkState) {
+        registerEvent("turnToStorageArea")
+        State = turnToStorageArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          // document.getElementById("SWITCH-workstate").checked = false;
+          if (item == "tube") {
+            if (!State.kun.rightArm.holding) {
+              registerEvent("rightHandGetTube")
+              State = rightHandGetTube(State)
+              console.log("Timeout: " + State.time)
+              setTimeout(function() {
+                State.kun.rightArm.holding = "tube"
+                // notify("Task completed")
+              }, State.time * 1000)
+            } else {
+              notify("Right arm is holding " + State.kun.rightArm.holding + " already")
+            }
+          } else if (item == "flask") {
+            future();
+          } else if (item == "beaker") {
+            if (!State.kun.rightArm.holding) {
+              registerEvent("rightHandGetBeaker")
+              State = rightHandGetTube(State)
+              console.log("Timeout: " + State.time)
+              setTimeout(function() {
+                State.kun.rightArm.holding = "beaker"
+                // notify("Task completed")
+              }, State.time * 1000)
+            } else {
+              notify("Right arm is holding " + State.kun.rightArm.holding + " already")
+            }
+          }
+          
+        }, State * 1000)
+      } else {
+        if (item == "tube") {
+          if (!State.kun.rightArm.holding) {
+            registerEvent("rightHandGetTube")
+            State = rightHandGetTube(State)
+            console.log("Timeout: " + State.time)
+            setTimeout(function() {
+              State.kun.rightArm.holding = "tube"
+              // notify("Task completed")
+            }, State.time * 1000)
+          } else {
+            notify("Right arm is holding " + State.kun.rightArm.holding + " already")
+          }
+        } else if (item == "flask") {
+          future();
+        } else if (item == "beaker") {
+          if (!State.kun.rightArm.holding) {
+            registerEvent("rightHandGetBeaker")
+            State = rightHandGetTube(State)
+            console.log("Timeout: " + State.time)
+            setTimeout(function() {
+              State.kun.rightArm.holding = "beaker"
+              // notify("Task completed")
+            }, State.time * 1000)
+          } else {
+            notify("Right arm is holding " + State.kun.rightArm.holding + " already")
+          }
+        }
+      }
+    }
+    OnClick.LeftArm.Acquire = function(id) {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (!State.kun.leftArm.holding) {
+        notify("Left arm has no container");
+        return;
+      }
+      var t = Number(document.getElementById("leftarm-acquire-quantity-slider").value) / 4
+      if (t > 1) {
+        t = 1;
+      }
+      if (t <= 0) {
+        return;
+      }
+      if (State.kun.environment.isWorkState) {
+        registerEvent("turnToStorageArea")
+        State = turnToStorageArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          // document.getElementById("SWITCH-workstate").checked = false;
+          if (id == 1) {
+            // NaOH
+            // 1. leftHandReachOutGetNaOH
+            registerEvent("leftHandReachOutGetNaOH");
+            State = leftHandReachOutGetNaOH(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              // 2. dropNaOH
+              registerEvent("dropNaOH[param1="+t+"]");
+              State = dropNaOH(State, t);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                State.kun.rightArm.isEmpty = false;
+                // 3. leftHandFinishGetNaOH
+                registerEvent("leftHandFinishGetNaOH");
+                State = leftHandFinishGetNaOH(State);
+                console.log("Timeout: " + State.time);
+                setTimeout(function() {
+                  console.log("Completed Left->NaOH");
+                }, State.time * 1000)
+              }, State.time * 1000)
+            }, State.time * 1000)
+          } else if (id == 2) {
+            future();
+          } else if (id == 3) {
+            future();
+          } else if (id == 4) {
+            future();
+          }
+        }, State.time * 1000);
+      } else {
+        if (id == 1) {
+          // NaOH
+          // 1. leftHandReachOutGetNaOH
+          registerEvent("leftHandReachOutGetNaOH");
+          State = leftHandReachOutGetNaOH(State);
+          console.log("Timeout: " + State.time);
+          setTimeout(function() {
+            // 2. dropNaOH
+            registerEvent("dropNaOH[param1="+t+"]");
+            State = dropNaOH(State, t);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              State.kun.rightArm.isEmpty = false;
+              // 3. leftHandFinishGetNaOH
+              registerEvent("leftHandFinishGetNaOH");
+              State = leftHandFinishGetNaOH(State);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                console.log("Completed Left->NaOH");
+              }, State.time * 1000)
+            }, State.time * 1000)
+          }, State.time * 1000)
+        } else if (id == 2) {
+          future();
+        } else if (id == 3) {
+          future(); 
+        } else if (id == 4) {
+          future();
+        }
+      }
+    }
+    OnClick.RightArm.Acquire = function(id) {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (!State.kun.rightArm.holding) {
+        notify("Right arm has no container");
+        return;
+      }
+      var t = Number(document.getElementById("rightarm-acquire-quantity-slider").value) / 4
+      if (t > 1) {
+        t = 1;
+      }
+      if (t <= 0) {
+        return;
+      }
+      if (State.kun.environment.isWorkState) {
+        registerEvent("turnToStorageArea")
+        State = turnToStorageArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = false;
+          // document.getElementById("SWITCH-workstate").checked = false;
+          if (id == 1) {
+            future();
+          } else if (id == 2) {
+            // CuSO4
+            // 1. rightHandReachOutGetCuSO4
+            registerEvent("rightHandReachOutGetCuSO4");
+            State = rightHandReachOutGetCuSO4(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              // 2. dropCuSO4
+              registerEvent("dropCuSO4[param1="+t+"]");
+              State = dropCuSO4(State, t);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                State.kun.rightArm.isEmpty = false;
+                // 3. rightHandFinishGetCuSO4
+                registerEvent("rightHandFinishGetCuSO4");
+                State = rightHandFinishGetCuSO4(State);
+                console.log("Timeout: " + State.time);
+                setTimeout(function() {
+                  console.log("Completed Right->CuSO4");
+                }, State.time * 1000)
+              }, State.time * 1000)
+            }, State.time * 1000)
+          } else if (id == 3) {
+            // H2O2
+            // 1. rightHandReachOutGetH2O2
+            registerEvent("rightHandReachOutGetH2O2");
+            State = rightHandReachOutGetH2O2(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              // 2. dropH2O2
+              registerEvent("dropH2O2[param1="+t+"]");
+              State = dropH2O2(State, t);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                State.kun.rightArm.isEmpty = false;
+                // 3. rightHandFinishGetH2O2
+                registerEvent("rightHandFinishGetH2O2");
+                State = rightHandFinishGetH2O2(State);
+                console.log("Timeout: " + State.time);
+                setTimeout(function() {
+                  console.log("Completed Right->H2O2");
+                }, State.time * 1000)
+              }, State.time * 1000)
+            }, State.time * 1000)
+          } else if (id == 4) {
+            // MnO2
+            // 1. rightHandReachOutGetMnO2
+            registerEvent("rightHandReachOutGetMnO2");
+            State = rightHandReachOutGetMnO2(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+            // 2. dropMnO2
+              registerEvent("dropMnO2[param1="+t+"]");
+              State = dropMnO2(State, t);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                State.kun.rightArm.isEmpty = false;
+                // 3. rightHandFinishGetMnO2
+                registerEvent("rightHandFinishGetMnO2");
+                State = rightHandFinishGetMnO2(State);
+                console.log("Timeout: " + State.time);
+                setTimeout(function() {
+                  console.log("Completed Right->MnO2");
+                }, State.time * 1000)
+              }, State.time * 1000)
+            }, State.time * 1000)
+          }
+        }, State.time * 1000)
+      } else {
+        if (id == 1) {
+          future();
+        } else if (id == 2) {
+          // CuSO4
+          // 1. rightHandReachOutGetCuSO4
+          registerEvent("rightHandReachOutGetCuSO4");
+          State = rightHandReachOutGetCuSO4(State);
+          console.log("Timeout: " + State.time);
+          setTimeout(function() {
+            // 2. dropCuSO4
+            registerEvent("dropCuSO4[param1="+t+"]");
+            State = dropCuSO4(State, t);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              State.kun.rightArm.isEmpty = false;
+              // 3. rightHandFinishGetCuSO4
+              registerEvent("rightHandFinishGetCuSO4");
+              State = rightHandFinishGetCuSO4(State);
+              console.log("Timeout: " + State.time);
+              setTimeout(function() {
+                console.log("Completed Right->CuSO4");
+              }, State.time * 1000)
+            }, State.time * 1000)
+          }, State.time * 1000)
+    
+        } else if (id == 3) {
+          future();
+        } else if (id == 4) {
+          future();
+        }
+      }
+    }
+    OnClick.LeftArm.Mix = function () {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (!State.kun.leftArm.holding) {
+        notify("Left arm has no container");
+        return;
+      }
+      if (!State.kun.rightArm.holding) {
+        notify("Right arm has no container");
+        return;
+      }
+      if (!State.kun.environment.isWorkState) {
+        registerEvent("turnToExperimentArea")
+        State = turnToExperimentArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = true;
+          // document.getElementById("SWITCH-workstate").checked = true;
+          registerEvent("mixLiquid");
+          State = mixLiquid(State);
+          console.log("Timeout: " + State.time);
+          setTimeout(function() {
+          State.kun.leftArm.isEmpty = true;
+          State.kun.leftArm.isEmpty = false;
+          }, State.time * 1000)
+        }, State.time * 1000)
+      } else {
+        registerEvent("mixLiquid");
+        State = mixLiquid(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.leftArm.isEmpty = true;
+          State.kun.leftArm.isEmpty = false;
+        }, State.time * 1000)
+      }
+    }
+    OnClick.LeftArm.Observe = function () {
+      var available = queryStatus();
+      if (!available) {
+        DIALOG_forcePass.showModal();
+        return;
+      }
+      if (!State.kun.environment.isWorkState) {
+        registerEvent("turnToExperimentArea")
+        State = turnToExperimentArea(State);
+        console.log("Timeout: " + State.time);
+        setTimeout(function() {
+          State.kun.environment.isWorkState = true;
+          if (State.kun.leftArm.isObserved) {
+            registerEvent("HDCameraEndWatchTube");
+            State = HDCameraEndWatchTube(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              State.kun.leftArm.isObserved = false
+              document.getElementById("CAMERA").style = "display: block"
+              document.getElementById("HDCAMERA").style = "display: none"
+              document.getElementById("THERMAL").style = "display: none"
+              State.kun.environment.display = "camera"
+            }, State.time * 1000)
+          } else {
+            registerEvent("HDCameraBeginWatchTube");
+            State = HDCameraBeginWatchTube(State);
+            console.log("Timeout: " + State.time);
+            setTimeout(function() {
+              State.kun.leftArm.isObserved = true
+              document.getElementById("CAMERA").style = "display: none"
+              document.getElementById("HDCAMERA").style = "display: block"
+              document.getElementById("THERMAL").style = "display: none"
+              State.kun.environment.display = "hdcamera"
+            }, State.time * 1000)
+          }
+        }, State * 1000)
+      } else {
+        if (State.kun.leftArm.isObserved) {
+          registerEvent("HDCameraEndWatchTube");
+          State = HDCameraEndWatchTube(State);
+          console.log("Timeout: " + State.time);
+          setTimeout(function() {
+            State.kun.leftArm.isObserved = false
+          }, State.time * 1000)
+        } else {
+          registerEvent("HDCameraBeginWatchTube");
+          State = HDCameraBeginWatchTube(State);
+          console.log("Timeout: " + State.time);
+          setTimeout(function() {
+            State.kun.leftArm.isObserved = true
+          }, State.time * 1000)
+        }
+      }
+    }
+    OnClick.LeftArm.GetChemicals = function() {
+      menu = document.getElementById("leftarm-acquire-menu-1");
+      menu.innerHTML=Chemicals[0]['formula'];
+      menu = document.getElementById("leftarm-acquire-menu-2");
+      menu.innerHTML=Chemicals[1]['formula'];
+      menu = document.getElementById("leftarm-acquire-menu-3");
+      menu.innerHTML=Chemicals[2]['formula'];
+      menu = document.getElementById("leftarm-acquire-menu-4");
+      menu.innerHTML=Chemicals[3]['formula'];
+      // Display TeX
+      MathJax.typeset()
+    }
+    OnClick.RightArm.GetChemicals = function() {
+      menu = document.getElementById("rightarm-acquire-menu-1");
+      menu.innerHTML=Chemicals[0]['formula'];
+      menu = document.getElementById("rightarm-acquire-menu-2");
+      menu.innerHTML=Chemicals[1]['formula'];
+      menu = document.getElementById("rightarm-acquire-menu-3");
+      menu.innerHTML=Chemicals[2]['formula'];
+      menu = document.getElementById("rightarm-acquire-menu-4");
+      menu.innerHTML=Chemicals[3]['formula'];
+      // Display TeX
+      MathJax.typeset()
+    }
+    OnClick.LeftArm.AcquireQuantityUpdate = function() {
+      var i = Number(document.getElementById("leftarm-acquire-quantity-slider").value)
+      if (i == 1) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: Little";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 2) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: Some";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 3) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: A lot";
+        document.getElementById("leftarm-acquire-menu-button").disabled = false;
+      } else if (i == 0) {
+        document.getElementById("leftarm-acquire-quantity-display").innerHTML="Amount: 0";
+        document.getElementById("leftarm-acquire-menu-button").disabled = true;
+      }
+    }
+    OnClick.RightArm.AcquireQuantityUpdate = function() {
+      var i = Number(document.getElementById("rightarm-acquire-quantity-slider").value)
+      if (i == 1) {
+        document.getElementById("rightarm-acquire-quantity-display").innerHTML="Amount: Little";
+        document.getElementById("rightarm-acquire-menu-button").disabled = false;
+      } else if (i == 2) {
+        document.getElementById("rightarm-acquire-quantity-display").innerHTML="Amount: Some";
+        document.getElementById("rightarm-acquire-menu-button").disabled = false;
+      } else if (i == 3) {
+        document.getElementById("rightarm-acquire-quantity-display").innerHTML="Amount: A lot";
+        document.getElementById("rightarm-acquire-menu-button").disabled = false;
+      } else if (i == 0) {
+        document.getElementById("rightarm-acquire-quantity-display").innerHTML="Amount: 0";
+        document.getElementById("rightarm-acquire-menu-button").disabled = true;
+      }
+    }
+  
+    // Set onclick callbacks
+    document.getElementById("SIDEBAR_ITEM_demonstration").onclick = function() {
+      promptDemonstrationExperiment();
+    };
+    document.getElementById("SIDEBAR_ITEM_scripting").onclick = function() {
+      DIALOG_inputCommand.showModal();
+    };
+  </script>
+</html>

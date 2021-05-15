@@ -1,0 +1,17 @@
+{
+  "title": "Chemist",
+  "sidebar": {
+    "title": "Chemist",
+    "subtitle": "Made with <3 by team Lava",
+    "demonstration": "Demonstration",
+    "scripting": "Scripting",
+    "about_help": "About / Help"
+  },
+  "ui": {
+    "tabs": {
+      "environment": "Environment",
+      "left_arm": "Left Arm",
+      "right_arm": "Right Arm"
+    },
+  }
+}

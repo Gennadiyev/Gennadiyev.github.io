@@ -1,0 +1,45 @@
+.demo-card-wide.mdl-card {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #000;
+  height: 128px;
+  background: url('Assets/title.png') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #000;
+}
+
+#DISPLAY {
+  float: left;
+  width: 100%;
+}
+
+#CAMERA {
+  width: 100%;
+  background: #333;
+}
+
+#HDCAMERA {
+  width: 100%;
+  background: #555;
+  display: none;
+}
+
+#THERMAL {
+  width: 100%;
+  background: #acb;
+  display: none;
+}
+
+#CONTROL {
+  float: right;
+  width: 40%;
+}
+
+#CONTROL_TABS {
+  width: 40%;
+}
